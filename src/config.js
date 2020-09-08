@@ -16,7 +16,7 @@ const config = {
                 widgetFunc: (props) => <LearningOptions {...props} />
             },
             {
-                widgetName: "javacriptLinks",
+                widgetName: "javascriptLinks",
                 widgetFunc: (props) => <LinkList {...props} />,
                 
                 props: {
@@ -35,14 +35,14 @@ const config = {
                             text: "Frontend Masters",
                             url: "https://frontendmasters.com",
                             id: 3,
-                        },
+                        }
                        
-                    ],
-                },
-            },
-        ],
+                    ]
+                }
+            }
+        ]
     
     
-};
+}
 
 export default config;
