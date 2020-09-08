@@ -1,5 +1,5 @@
 class MessageParser {
-    constructor( actionProvider, state) {
+    constructor( actionProvider) {
         this.actionProvider = actionProvider;
     }
 
