@@ -1,6 +1,7 @@
 import React from 'react';
 import { createChatBotMessage } from 'react-chatbot-kit';
 import LearningOptions from './components/LearningOptions/LearningOptions';
+import LinkList from './components/LearningOptions/LinkList/LinkList';
 
 
 const config = {
@@ -13,6 +14,10 @@ const config = {
             {
                 widgetName: "learningOptions",
                 widgetFunc: (props) => <LearningOptions {...props} />
+            },
+            {
+                widgetName: "javacriptLinks",
+                widgetFunc: (props) => <LinkList {...props} />
             }
         ]
     
