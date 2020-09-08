@@ -1,16 +1,22 @@
+import React from 'react';
 import { createChatBotMessage } from 'react-chatbot-kit';
+import LearningOptions from './components/LearningOptions/LearningOptions';
+
 
 const config = {
-    botName: 'Online LearningBot',
-    initialMessages: [createChatBotMessage(`Hi, I'm here to help. What do you want to learn?`)],
-    customStyles: {
-        botMessageBox: {
-            backgroundColor: "#376B7E",
-        },
-        chatButton: {
-            backgroundColor: "#376B7E",
-        },
-    },
+    initialMessages: [
+        createChatBotMessage(`Hi, I'm here to help. What do you want to learn?`, {
+            widget: "learningOptions",
+        })
+    ],
+        widgets: [
+            {
+                widgetName: "learningOptions",
+                widgetFunc: (props) => <LearningOptions {...props} />
+            }
+        ]
+    
+    
 }
 
 export default config;
