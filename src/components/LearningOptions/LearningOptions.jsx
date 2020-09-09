@@ -1,6 +1,5 @@
 import React from 'react';
-
-import "./LearningOptions.css";
+import styled from 'styled-components';
 
 const LearningOptions = (props) => {
     const options = [
@@ -14,16 +13,30 @@ const LearningOptions = (props) => {
     ];
 
     const optionsMarkup = options.map((option) => (
-        <button 
+        <Button 
         className="learning-options-button" 
         key={option.id} 
         onClick={option.handler}
         >
             {option.text}
-        </button>
+        </Button>
     ));
 
-    return <div className="learning-options-container">{optionsMarkup}</div>
+    return <Container>{optionsMarkup}</Container>
 }
 
 export default LearningOptions;
+
+const Button = styled.button`
+    padding: 0.5rem;
+    border-radius: 35px;
+    background - color: transparent;
+    border: 1px solid #000;
+    margin: 3px;
+    `;
+
+const Container = styled.div`
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+`;
